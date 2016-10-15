@@ -11,7 +11,7 @@ Petit projet modeste permettant de commander un Orvibo Allone en python 3.4.
 
 ## Références
 Ce projet permet d’utiliser la fonction IR du Orvibo Allone, il est basé sur le projet de Cherezov disponible à l’adresse : [git  Cherezov Orvibo](https://github.com/cherezov/orvibo).
-D'autre fonction fonction verrons le jour par la suite.
+D’autres fonctions verront le jour par la suite.
 
 ## Utilisation
 
@@ -22,38 +22,38 @@ sudo pip3 install bottle
 ### Fonctionnement
 
 #### Lancer main.py
-Telecharger Myorvibo,
+Télécharger Myorvibo,
 ``` shell
 > cd myorvibo
 > python3 main.py
 ```
 #### Liste des commandes
 
-* Pour avoir la liste des orvibo allone ainsi que la liste des commandes ir enregistrées.
+* Pour avoir la liste des orvibo allone ainsi que la liste des commandes IR enregistrées.
 Exemple:
 ```http
 http://ipraspberrypi:9000/api?action=discover
 ```
-Résultat: {ip :[ipOrvibo],commands :[[liste des commandes ir]]}
+Résultat: {ip :[ipOrvibo],commands :[[liste des commandes IR]]}
 
-* Pour lancer l'apprentissage d'une commande ir
+* Pour lancer l'apprentissage d'une commande IR
 Exemple:
 
 ```http
 http://ipraspberrypi:9000/api?action=learn&ip=iporvibo&touch=tv_1.ir
 ```
-Resultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'echec {"cmd": "commande envoyées", "succes": false}
+Résultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'échec {"cmd": "commande envoyées", "succes": false}
 
-Le titre de la touche doit toujour etre de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse ip de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'execution de la commande sera beaucoup plus lente.
+Le titre de la touche doit toujours être de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse IP de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'exécution de la commande sera beaucoup plus lente.
 
-Pour emettre une commande ir deux solutions
+Pour émettre une commande IR deux solutions
 - Soit une seule touche:
 
 Exemple:
 ```http
 http://ipraspberrypi:9000/api?action=send&ip=iporvibo&touch=tv_1.ir
 ```
-Resultat: {"cmd": "commande émise", "succes": true} ou en cas d'echec {"cmd": "commande émise", "succes": false}
+Résultat: {"cmd": "commande émise", "succes": true} ou en cas d'échec {"cmd": "commande émise", "succes": false}
 
 - Soit une liste de commandes du type [tv_2.ir,tv_1.ir] autant que vous le souhaitez mais toujours séparé par <,> et se terminant toutes par <.ir>
 
@@ -61,5 +61,5 @@ Exemple:
 ```http
 http://ipraspberrypi:9000/api?action=send&ip=iporvibo&touch=tv_2.ir,tv_1.ir
 ```
-Resultat: {"cmd": "liste de commandes émises", "succes": true} ou en cas d'echec {"cmd": "liste des commandes émises", "succes": false}
+Résultat: {"cmd": "liste de commandes émises", "succes": true} ou en cas d'échec {"cmd": "liste des commandes émises", "succes": false}
 
