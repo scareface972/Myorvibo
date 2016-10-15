@@ -47,17 +47,17 @@ Resultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'echec {"cmd"
 Le <titre-de-la-touche> doit toujour etre de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse ip de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'execution de la commande sera beaucoup plus lente.
 
 * pour emettre une commande ir deux solutions
-** soit une seule touche:
+- Soit une seule touche:
 
-exemple:
+Exemple:
 ```http
 http://ipraspberrypi:9000/api?action=send&ip=iporvibo&touch=tv_1.ir
 ```
 Resultat: {"cmd": "commande émise", "succes": true} ou en cas d'echec {"cmd": "commande émise", "succes": false}
 
-** Soit une liste de commandes du type tv_2.ir,tv_1.ir autant que vous le souhaitez mais toujours séparé par <,> et se terminant toutes par <.ir>
+- Soit une liste de commandes du type tv_2.ir,tv_1.ir autant que vous le souhaitez mais toujours séparé par <,> et se terminant toutes par <.ir>
 
-exemple:
+Exemple:
 ```http
 http://ipraspberrypi:9000/api?action=send&ip=iporvibo&touch=tv_2.ir,tv_1.ir
 ```
