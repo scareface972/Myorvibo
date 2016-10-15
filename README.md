@@ -44,7 +44,7 @@ http://ipraspberrypi:9000/api?action=learn&ip=iporvibo&touch=tv_1.ir
 ```
 Résultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'échec {"cmd": "commande envoyées", "succes": false}
 
-Le titre de la touche doit toujours être de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse IP de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'exécution de la commande sera beaucoup plus lente.
+Le titre de la touche doit toujours être de la forme suivante "touche.ir" (éviter les symboles +/-;) . L'adresse IP de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'exécution de la commande sera beaucoup plus lente.
 
 Pour émettre une commande IR deux solutions
 - Soit une seule touche:
