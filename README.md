@@ -46,7 +46,7 @@ Resultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'echec {"cmd"
 
 Le titre de la touche doit toujour etre de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse ip de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'execution de la commande sera beaucoup plus lente.
 
-* pour emettre une commande ir deux solutions
+Pour emettre une commande ir deux solutions
 - Soit une seule touche:
 
 Exemple:
