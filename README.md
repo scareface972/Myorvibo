@@ -40,11 +40,11 @@ Résultat: {ip :[ipOrvibo],commands :[[liste des commandes ir]]}
 Exemple:
 
 ```http
-http://ipraspberrypi:9000/api?action=learn&ip=iporvibo&touch=titre-de-la-touche
+http://ipraspberrypi:9000/api?action=learn&ip=iporvibo&touch=tv_1.ir
 ```
 Resultat: {"cmd": "commande envoyées", "succes": true} ou en cas d'echec {"cmd": "commande envoyées", "succes": false}
 
-Le <titre-de-la-touche> doit toujour etre de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse ip de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'execution de la commande sera beaucoup plus lente.
+Le titre de la touche doit toujour etre de la forme suivante <touche.ir> (éviter les symboles +/-;) . L'adresse ip de l'orvibo est facultative si vous n'avez qu'un orvibo, mais l'execution de la commande sera beaucoup plus lente.
 
 * pour emettre une commande ir deux solutions
 - Soit une seule touche:
@@ -55,7 +55,7 @@ http://ipraspberrypi:9000/api?action=send&ip=iporvibo&touch=tv_1.ir
 ```
 Resultat: {"cmd": "commande émise", "succes": true} ou en cas d'echec {"cmd": "commande émise", "succes": false}
 
-- Soit une liste de commandes du type tv_2.ir,tv_1.ir autant que vous le souhaitez mais toujours séparé par <,> et se terminant toutes par <.ir>
+- Soit une liste de commandes du type [tv_2.ir,tv_1.ir] autant que vous le souhaitez mais toujours séparé par <,> et se terminant toutes par <.ir>
 
 Exemple:
 ```http
